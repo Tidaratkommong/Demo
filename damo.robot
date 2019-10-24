@@ -1,8 +1,8 @@
 * Settings *
 Library    SeleniumLibrary
 * Variables *
-${BROWSER}    chromedriver
-${WELCOME URL}    http://google.com
+${BROWSER}    Chrome
+${WELCOME URL}    https://www.google.co.th
 ${INPUT URL}    http://cs.kku.ac.th
 * Test Cases *
 Open Page:
