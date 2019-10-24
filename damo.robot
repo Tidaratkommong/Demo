@@ -1,17 +1,14 @@
 * Settings *
 Library    SeleniumLibrary
 * Variables *
-${SERVER}    localhost:7272
 ${BROWSER}    Chrome
-${WELCOME}    https://www.google.co.th
-${DELAY}    0  
-${SUCCESS}   https://www.cs.kku.ac.th 
-
+${WELCOME URL}    http://google.com
+${INPUT URL}    http://cs.kku.ac.th
 * Test Cases *
+Open Page:
+    Open Browser    ${WELCOME URL}    ${BROWSER} 
+    Input Text    q    ${INPUT URL}
+    Submit Form    tsf
+    Wait Until Page Contains    http://cs.kku.ac.th  
 
-Open Event Registration Page
-    Open Browser    ${WELCOME}    ${BROWSER}
-	Set Selenium Speed    ${DELAY}
-
-Success
-	Click Button    registerButton
+Test teardown    Close Browser
