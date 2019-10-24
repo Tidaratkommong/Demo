@@ -1,14 +1,20 @@
 * Settings *
 Library    SeleniumLibrary
 * Variables *
-${BROWSER}    Chrome
-${WELCOME URL}    https://www.google.co.th
-${INPUT URL}    http://cs.kku.ac.th
-* Test Cases *
-Open Page:
-    Open Browser    ${WELCOME URL}    ${BROWSER} 
-    Input Text    q    ${INPUT URL}
-    Submit Form    tsf
-    Wait Until Page Contains    http://cs.kku.ac.th  
+${SERVER}    www.google.co.th
+${BROWSER}    chrome
+${WELCOME URL}    http://${SERVER}
+${DELAY}    0
+${URL}    https://www.cs.kku.ac.th
 
-Test teardown    Close Browser
+
+* Test Cases *
+Open Welcome Page
+   Open Browser    ${WELCOME URL}    ${BROWSER}
+   Set Selenium Speed    ${DELAY}
+   Location Should Be    ${WELCOME URL}
+   
+Test Open URL:
+    input text    q    ${URL}
+	Click Button	btnK
+    Page Should Contain    https://www.cs.kku.ac.th
