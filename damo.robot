@@ -2,7 +2,7 @@
 Library    SeleniumLibrary
 * Variables *
 ${SERVER}    www.google.co.th
-${BROWSER}    chrome
+${BROWSER}    Chrome
 ${WELCOME URL}    http://${SERVER}
 ${DELAY}    0
 ${URL}    https://www.cs.kku.ac.th
