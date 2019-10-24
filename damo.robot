@@ -1,7 +1,7 @@
 * Settings *
 Library    SeleniumLibrary
 * Variables *
-${BROWSER}    Chrome
+${BROWSER}    chromedriver
 ${WELCOME URL}    http://google.com
 ${INPUT URL}    http://cs.kku.ac.th
 * Test Cases *
